@@ -18,21 +18,6 @@
     "env": {
       "COMPOSER_ALLOW_SUPERUSER": "1",
       "COMPOSER_HOME": "/tmp"
-    },
-    "build": {
-      "env": {
-        "COMPOSER_ALLOW_SUPERUSER": "1",
-        "COMPOSER_HOME": "/tmp"
-      },
-      "commands": [
-        "curl -sS https://getcomposer.org/installer | php",
-        "mv composer.phar /usr/local/bin/composer",
-        "composer install --optimize-autoloader --no-dev",
-        "php artisan key:generate",
-        "php artisan config:cache",
-        "php artisan route:cache",
-        "php artisan view:cache"
-      ]
     }
   }
   
